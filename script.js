@@ -1,10 +1,14 @@
 const computerOption = ["rock", "paper", "scissors"];
 
 const computerChoice = getComputerChoice();
+console.log(computerChoice);
 
 let playerChoice = getPlayerChoice();
 
-console.log(playerChoice);
+let result = playRound(playerChoice, computerChoice);
+
+alert(result);
+
 
 
 function getComputerChoice() {
@@ -21,5 +25,36 @@ function getPlayerChoice()  {
     } else {
         alert("You have to choose between rock, paper or scissors!");
         return;
+    }
+}
+
+function playRound(playerChoice, computerChoice) {
+    if (playerChoice === "rock" && computerChoice === "scissors") {
+        let result = "You win! Rock beats scissors!";
+        return result;
+    } else if (playerChoice === "rock" && computerChoice === "paper") {
+        let result = "You lose! Paper beats rock!";
+        return result;
+    } else if (playerChoice === "rock" && computerChoice === "rock") {
+        let result = "Draw!";
+        return result;
+    } else if (playerChoice === "paper" && computerChoice === "scissors") {
+        let result = "You lose! Scissors beats paper!";
+        return result;
+    } else if (playerChoice === "paper" && computerChoice === "rock") {
+        let result = "You win! Paper beats rock!";
+        return result;
+    } else if (playerChoice === "paper" && computerChoice === "paper") {
+        let result = "Draw!";
+        return result;
+    } else if (playerChoice === "scissors" && computerChoice === "paper") {
+        let result = "You win! Scissors beat paper!";
+        return result;
+    } else if (playerChoice === "scissors" && computerChoice === "rock") {
+        let result = "You lose! Rock beats scissors!";
+        return result;
+    } else if (playerChoice === "scissors" && computerChoice === "scissors") {
+        let result = "Draw!";
+        return result;
     }
 }
