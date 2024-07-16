@@ -3,7 +3,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 
-playGame();
+// playGame();
 
 console.log(playerScore, computerScore);
 
