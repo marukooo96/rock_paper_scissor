@@ -64,7 +64,7 @@ function playRound() {
 }
 
 function playGame() {
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < 1; i++) {
         let result = playRound();
         console.log(result);
     }
