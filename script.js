@@ -4,28 +4,13 @@ let computerScore = 0;
 
 let playerSelection;
 const options = document.querySelector('#options');
-// const rock = document.querySelector('#rock');
-// const paper = document.querySelector('#paper');
-// const scissors = document.querySelector('#scissors');
 
-options.addEventListener('click', (event) => {
-    let target = event.target;
+const rock = document.querySelector('#rock');
 
-    switch(target.id) {
-        case 'rock' :
-            playerSelection = 'rock';
-            break;
-        
-        case 'paper' :
-            playerSelection = 'paper';
-            console.log(playerSelection);
-            break;
-        
-        case 'scissors' :
-            playerSelection = 'scissors';
-            break;
-    }
-})
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+
 
 
 
