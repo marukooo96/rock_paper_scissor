@@ -4,6 +4,8 @@ document.getElementById("playerScore").innerHTML = playerScore;
 let computerScore = 0;
 document.getElementById("computerScore").innerHTML = computerScore;
 
+const div = document.getElementById("winner");
+
 let playerSelection;
 const options = document.querySelector('#options');
 
@@ -64,6 +66,16 @@ function getComputerSelection() {
 function updateScore () {
     document.getElementById("playerScore").innerHTML = playerScore;
     document.getElementById("computerScore").innerHTML = computerScore;
+
+    if (playerScore == 5) {
+        const message = document.createElement("h1");
+        message.textContent = "Congratulations! You won!";
+
+        div.appendChild(message);
+
+        console.log("You won");
+        return;
+    }
 }
 
 function playRound() {
