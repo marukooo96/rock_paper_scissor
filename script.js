@@ -1,4 +1,4 @@
-const computerOption = ["rock", "paper", "scissors"];
+const computerOption = ["Rock", "Paper", "Scissors"];
 let playerScore = 0;
 document.getElementById("playerScore").innerHTML = playerScore;
 let computerScore = 0;
@@ -13,26 +13,11 @@ const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
-rock.addEventListener('click', () => {
-    playerSelection = 'rock';
-    console.log(playerSelection);
+rock.addEventListener('click', selectRock);
 
-    playRound();
-})
+paper.addEventListener('click', selectPaper);
 
-paper.addEventListener('click', () => {
-    playerSelection = 'paper';
-    console.log(playerSelection);
-
-    playRound();
-})
-
-scissors.addEventListener('click', () => {
-    playerSelection = 'scissors';
-    console.log(playerSelection);
-
-    playRound();
-})
+scissors.addEventListener('click', selectScissors);
 
 const game = document.querySelector('#game');
 
@@ -45,7 +30,20 @@ const game = document.querySelector('#game');
 // console.log(playerScore, computerScore);
 
 
+function selectRock() {
+    playerSelection = 'Rock';
+    playRound();
+}
 
+
+function selectPaper() {
+    playerSelection = 'Paper';
+    playRound();
+}
+
+function selectScissors() {
+    playerSelection = 'Scissors';
+}
 
 
 function getComputerSelection() {
@@ -75,9 +73,9 @@ function updateScore () {
 
         div.appendChild(message);
 
-        // rock.removeEventListener('click');
-        // paper.removeEventListener('click');
-        // scissors.removeEventListener('click');
+        rock.removeEventListener('click');
+        paper.removeEventListener('click');
+        scissors.removeEventListener('click');
 
         
         return;
@@ -88,9 +86,9 @@ function updateScore () {
 
         div.appendChild(message);
 
-        // rock.removeEventListener('click');
-        // paper.removeEventListener('click');
-        // scissors.removeEventListener('click');
+        rock.removeEventListener('click', selectRock);
+        paper.removeEventListener('click', selectPaper);
+        scissors.removeEventListener('click', selectScissors);
 
 
         return;
@@ -101,46 +99,46 @@ function playRound() {
     let computerSelection = getComputerSelection();
     
     const gameMessage = document.createElement('h1');
-    gameMessage.textContent = 'You chose '+playerSelection+', Computer chose '+computerSelection+'';
+    // gameMessage.textContent = 'You chose '+playerSelection+', Computer chose '+computerSelection+'';
 
     game.appendChild(gameMessage);
 
-    if (playerSelection === "rock" && computerSelection === "scissors") {
-        let result = "You win! Rock beats scissors!";
+    if (playerSelection === "Rock" && computerSelection === "Scissors") {
+        let result = "You win! Rock beats Scissors!";
         playerScore += 1;
         updateScore();
         console.log(result, playerScore, computerScore);
         return result, playerScore, computerScore;
-    } else if (playerSelection === "rock" && computerSelection === "paper") {
-        let result = "You lose! Paper beats rock!";
+    } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+        let result = "You lose! Paper beats Rock!";
         computerScore += 1;
         updateScore();
         console.log(result, playerScore, computerScore);
         return result;
-    } else if (playerSelection === "rock" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "paper" || playerSelection === "scissors" && computerSelection === "scissors") {
+    } else if (playerSelection === "Rock" && computerSelection === "Rock" || playerSelection === "Paper" && computerSelection === "Paper" || playerSelection === "Scissors" && computerSelection === "Scissors") {
         let result = "Draw!";
         console.log(result, playerScore, computerScore);
         return result;
-    } else if (playerSelection === "paper" && computerSelection === "scissors") {
-        let result = "You lose! Scissors beats paper!";
+    } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+        let result = "You lose! Scissors beats Paper!";
         computerScore += 1;
         updateScore();
         console.log(result, playerScore, computerScore);
         return result;
-    } else if (playerSelection === "paper" && computerSelection === "rock") {
-        let result = "You win! Paper beats rock!";
+    } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+        let result = "You win! Paper beats Rock!";
         playerScore += 1;
         updateScore();
         console.log(result, playerScore, computerScore);
         return result;
-    } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        let result = "You win! Scissors beat paper!";
+    } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+        let result = "You win! Scissors beat Paper!";
         playerScore += 1;
         updateScore();
         console.log(result, playerScore, computerScore);
         return result;
-    } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        let result = "You lose! Rock beats scissors!";
+    } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+        let result = "You lose! Rock beats Scissors!";
         computerScore += 1;
         updateScore();
         console.log(result, playerScore, computerScore);
