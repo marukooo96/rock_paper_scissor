@@ -71,7 +71,7 @@ function updateScore () {
 
     if (playerScore == 5) {
         const message = document.createElement("h1");
-        message.textContent = "Congratulations! You won!";
+        message.textContent = "Congratulations! You won the game!";
 
         div.appendChild(message);
 
@@ -84,7 +84,7 @@ function updateScore () {
 
     } else if (computerScore == 5) {
         const message = document.createElement("h1");
-        message.textContent = "Oh no! You lost!";
+        message.textContent = "Oh no! You lost the game!";
 
         div.appendChild(message);
 
@@ -99,8 +99,11 @@ function updateScore () {
 
 function playRound() {
     let computerSelection = getComputerSelection();
-    console.log(computerSelection);
-    // let playerChoice = getPlayerChoice();
+    
+    const gameMessage = document.createElement('h1');
+    gameMessage.textContent = 'You chose '+playerSelection+', Computer chose '+computerSelection+'';
+
+    game.appendChild(gameMessage);
 
     if (playerSelection === "rock" && computerSelection === "scissors") {
         let result = "You win! Rock beats scissors!";
