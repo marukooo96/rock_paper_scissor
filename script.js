@@ -34,6 +34,8 @@ scissors.addEventListener('click', () => {
     playRound();
 })
 
+const game = document.querySelector('#game');
+
 
 
 
@@ -73,9 +75,9 @@ function updateScore () {
 
         div.appendChild(message);
 
-        rock.removeEventListener('click');
-        paper.removeEventListener('click');
-        scissors.removeEventListener('click');
+        // rock.removeEventListener('click');
+        // paper.removeEventListener('click');
+        // scissors.removeEventListener('click');
 
         
         return;
@@ -86,9 +88,9 @@ function updateScore () {
 
         div.appendChild(message);
 
-        rock.removeEventListener('click');
-        paper.removeEventListener('click');
-        scissors.removeEventListener('click');
+        // rock.removeEventListener('click');
+        // paper.removeEventListener('click');
+        // scissors.removeEventListener('click');
 
 
         return;
