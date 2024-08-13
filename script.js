@@ -13,26 +13,26 @@ const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
-rock.onclick = () => {
-    playerSelection = "rock";
+rock.addEventListener('click', () => {
+    playerSelection = 'rock';
     console.log(playerSelection);
 
     playRound();
-}
+})
 
-paper.onclick = () => {
-    playerSelection = "paper";
+paper.addEventListener('click', () => {
+    playerSelection = 'paper';
     console.log(playerSelection);
 
     playRound();
-}
+})
 
-scissors.onclick = () => {
-    playerSelection = "scissors";
-    console.log("scissors");
+scissors.addEventListener('click', () => {
+    playerSelection = 'scissors';
+    console.log(playerSelection);
 
     playRound();
-}
+})
 
 
 
@@ -73,7 +73,24 @@ function updateScore () {
 
         div.appendChild(message);
 
-        console.log("You won");
+        rock.removeEventListener('click');
+        paper.removeEventListener('click');
+        scissors.removeEventListener('click');
+
+        
+        return;
+
+    } else if (computerScore == 5) {
+        const message = document.createElement("h1");
+        message.textContent = "Oh no! You lost!";
+
+        div.appendChild(message);
+
+        rock.removeEventListener('click');
+        paper.removeEventListener('click');
+        scissors.removeEventListener('click');
+
+
         return;
     }
 }
