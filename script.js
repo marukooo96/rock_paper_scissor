@@ -45,6 +45,10 @@ function selectScissors() {
     playerSelection = 'Scissors';
 }
 
+function playAgain() {
+    window.location.reload();
+}
+
 
 function getComputerSelection() {
     const computerSelection = computerOption[Math.floor(Math.random() * computerOption.length)];
@@ -70,8 +74,12 @@ function updateScore () {
     if (playerScore == 5) {
         const message = document.createElement("h1");
         message.textContent = "Congratulations! You won the game!";
-
         div.appendChild(message);
+
+        const button = document.createElement('button');
+        button.textContent = 'Play again';
+        button.addEventListener('click', playAgain);
+        div.appendChild(button);
 
         rock.removeEventListener('click');
         paper.removeEventListener('click');
@@ -83,8 +91,12 @@ function updateScore () {
     } else if (computerScore == 5) {
         const message = document.createElement("h1");
         message.textContent = "Oh no! You lost the game!";
-
         div.appendChild(message);
+
+        const button = document.createElement('button');
+        button.textContent = 'Play again';
+        button.addEventListener('click', playAgain);
+        div.appendChild(button);
 
         rock.removeEventListener('click', selectRock);
         paper.removeEventListener('click', selectPaper);
