@@ -20,6 +20,9 @@ paper.addEventListener('click', selectPaper);
 scissors.addEventListener('click', selectScissors);
 
 const game = document.querySelector('#game');
+const gameMessage = document.createElement('h1');
+game.appendChild(gameMessage);
+
 
 
 
@@ -110,10 +113,10 @@ function updateScore () {
 function playRound() {
     let computerSelection = getComputerSelection();
     
-    const gameMessage = document.createElement('h1');
-    // gameMessage.textContent = 'You chose '+playerSelection+', Computer chose '+computerSelection+'';
 
-    game.appendChild(gameMessage);
+    gameMessage.textContent = 'You chose '+playerSelection+', Computer chose '+computerSelection+'';
+
+
 
     if (playerSelection === "Rock" && computerSelection === "Scissors") {
         let result = "You win! Rock beats Scissors!";
