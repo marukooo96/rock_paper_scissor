@@ -7,7 +7,7 @@
 
 body {
     background-color: #ffd1df;
-    font-family: 'Akira', serif;
+    /* font-family: 'Akira', serif; */
 }
 
 /* .lang-english {
@@ -20,6 +20,7 @@ body {
 }
 .header {
     /* text-align: center; */
+    font-family: 'Akira', serif;
     display: flex;
     flex-direction: column;
     flex: 1;

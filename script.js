@@ -46,6 +46,7 @@ function selectPaper() {
 
 function selectScissors() {
     playerSelection = 'Scissors';
+    playRound();
 }
 
 function playAgain() {
