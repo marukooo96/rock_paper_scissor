@@ -5,8 +5,10 @@
     src: url('fonts/JiayouAkira-MAVEY.otf') format('opentype');
 }
 
+
 body {
     background-color: #ffd1df;
+    margin: 0px;
     /* font-family: 'Akira', serif; */
 }
 
@@ -18,14 +20,25 @@ body {
     font-family: 'MS Mincho', serif;
     /* font-size: 50px; */
 }
-.header {
+#header {
     /* text-align: center; */
     font-family: 'Akira', serif;
+    font-size: 30px;
+
     display: flex;
     flex-direction: column;
     flex: 1;
     align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    background-image: url('img/sakura.png')
+    gap: 5px;
+    padding: 15px;
+    justify-content: space-around;
+
+    background-image: url('img/sakura.png');
+}
+
+#trivia {
+    font-family: 'MS PMincho', serif;
+    font-size: 20px;
+
+    margin: 50px;
 }
