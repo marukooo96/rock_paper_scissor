@@ -36,9 +36,16 @@ body {
     background-image: url('img/sakura.png');
 }
 
-#trivia {
+.text {
     font-family: 'MS PMincho', serif;
     font-size: 20px;
 
+    /* display: flex;
+    flex-direction: column; */
+    /* padding: 10px; */
+    /* justify-content: space-around; */
+
     margin: 50px;
+
+    /* background-color: #E6E6FA; */
 }
