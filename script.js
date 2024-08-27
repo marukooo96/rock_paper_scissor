@@ -1,4 +1,4 @@
-const computerOption = ["Rock", "Paper", "Scissors"];
+const computerOption = ["Frog", "Snake", "Slug"];
 let playerScore = 0;
 document.getElementById("playerScore").innerHTML = playerScore;
 let computerScore = 0;
@@ -9,15 +9,15 @@ const div = document.getElementById("winner");
 let playerSelection;
 const options = document.querySelector('#options');
 
-const rock = document.querySelector('#rock');
-const paper = document.querySelector('#paper');
-const scissors = document.querySelector('#scissors');
+const frog = document.querySelector('#frog');
+const snake = document.querySelector('#snake');
+const slug = document.querySelector('#slug');
 
-rock.addEventListener('click', selectRock);
+frog.addEventListener('click', selectFrog);
 
-paper.addEventListener('click', selectPaper);
+snake.addEventListener('click', selectSnake);
 
-scissors.addEventListener('click', selectScissors);
+slug.addEventListener('click', selectSlug);
 
 const game = document.querySelector('#game');
 const gameMessage = document.createElement('h1');
@@ -33,19 +33,19 @@ game.appendChild(gameMessage);
 // console.log(playerScore, computerScore);
 
 
-function selectRock() {
-    playerSelection = 'Rock';
+function selectFrog() {
+    playerSelection = 'Frog';
     playRound();
 }
 
 
-function selectPaper() {
-    playerSelection = 'Paper';
+function selectSnake() {
+    playerSelection = 'Snake';
     playRound();
 }
 
-function selectScissors() {
-    playerSelection = 'Scissors';
+function selectSlug() {
+    playerSelection = 'Slug';
     playRound();
 }
 
@@ -85,9 +85,9 @@ function updateScore () {
         button.addEventListener('click', playAgain);
         div.appendChild(button);
 
-        rock.removeEventListener('click');
-        paper.removeEventListener('click');
-        scissors.removeEventListener('click');
+        frog.removeEventListener('click');
+        snake.removeEventListener('click');
+        slug.removeEventListener('click');
 
         
         return;
@@ -102,9 +102,9 @@ function updateScore () {
         button.addEventListener('click', playAgain);
         div.appendChild(button);
 
-        rock.removeEventListener('click', selectRock);
-        paper.removeEventListener('click', selectPaper);
-        scissors.removeEventListener('click', selectScissors);
+        frog.removeEventListener('click', selectFrog);
+        snake.removeEventListener('click', selectSnake);
+        slug.removeEventListener('click', selectSlug);
 
 
         return;
@@ -119,41 +119,41 @@ function playRound() {
 
 
 
-    if (playerSelection === "Rock" && computerSelection === "Scissors") {
+    if (playerSelection === "Frog" && computerSelection === "Slug") {
         let result = "You win! Rock beats Scissors!";
         playerScore += 1;
         updateScore();
         console.log(result, playerScore, computerScore);
         return result, playerScore, computerScore;
-    } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+    } else if (playerSelection === "Frog" && computerSelection === "Snake") {
         let result = "You lose! Paper beats Rock!";
         computerScore += 1;
         updateScore();
         console.log(result, playerScore, computerScore);
         return result;
-    } else if (playerSelection === "Rock" && computerSelection === "Rock" || playerSelection === "Paper" && computerSelection === "Paper" || playerSelection === "Scissors" && computerSelection === "Scissors") {
+    } else if (playerSelection === "Frog" && computerSelection === "Frog" || playerSelection === "Snake" && computerSelection === "Snake" || playerSelection === "Slug" && computerSelection === "Slug") {
         let result = "Draw!";
         console.log(result, playerScore, computerScore);
         return result;
-    } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+    } else if (playerSelection === "Snake" && computerSelection === "Slug") {
         let result = "You lose! Scissors beats Paper!";
         computerScore += 1;
         updateScore();
         console.log(result, playerScore, computerScore);
         return result;
-    } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+    } else if (playerSelection === "Snake" && computerSelection === "Frog") {
         let result = "You win! Paper beats Rock!";
         playerScore += 1;
         updateScore();
         console.log(result, playerScore, computerScore);
         return result;
-    } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+    } else if (playerSelection === "Slug" && computerSelection === "Snake") {
         let result = "You win! Scissors beat Paper!";
         playerScore += 1;
         updateScore();
         console.log(result, playerScore, computerScore);
         return result;
-    } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+    } else if (playerSelection === "Slug" && computerSelection === "Frog") {
         let result = "You lose! Rock beats Scissors!";
         computerScore += 1;
         updateScore();
