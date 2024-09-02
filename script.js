@@ -85,9 +85,9 @@ function updateScore () {
         button.addEventListener('click', playAgain);
         div.appendChild(button);
 
-        frog.removeEventListener('click');
-        snake.removeEventListener('click');
-        slug.removeEventListener('click');
+        frog.removeEventListener('click', selectFrog);
+        snake.removeEventListener('click', selectSnake);
+        slug.removeEventListener('click', selectSlug);
 
         
         return;

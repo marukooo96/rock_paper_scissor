@@ -49,3 +49,19 @@ body {
 
     /* background-color: #E6E6FA; */
 }
+
+#options {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+    font-family: 'MS PMincho, serif';
+}
