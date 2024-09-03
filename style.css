@@ -50,6 +50,14 @@ body {
     /* background-color: #E6E6FA; */
 }
 
+#select {
+    font-family: 'MS PMincho', 'serif';
+    text-decoration: underline;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
 #options {
     display: flex;
     justify-content: space-around;
@@ -63,5 +71,6 @@ body {
     align-items: center;
 
     
-    font-family: 'MS PMincho, serif';
+    font-family: 'MS PMincho', 'serif';
 }
+
