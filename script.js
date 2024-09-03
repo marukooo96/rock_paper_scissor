@@ -21,7 +21,9 @@ slug.addEventListener('click', selectSlug);
 
 const game = document.querySelector('#game');
 const gameMessage = document.createElement('h1');
+const gameMessage2 = document.createElement('h1');
 game.appendChild(gameMessage);
+game.appendChild(gameMessage2);
 
 
 
@@ -115,49 +117,42 @@ function playRound() {
     let computerSelection = getComputerSelection();
     
 
-    gameMessage.textContent = 'You chose '+playerSelection+', Computer chose '+computerSelection+'';
+    gameMessage.textContent = 'You chose '+playerSelection+', Computer chose '+computerSelection+'.';
 
 
 
     if (playerSelection === "Frog" && computerSelection === "Slug") {
-        let result = "You win! Rock beats Scissors!";
+        gameMessage2.textContent = "You win!";
         playerScore += 1;
         updateScore();
-        console.log(result, playerScore, computerScore);
         return result, playerScore, computerScore;
     } else if (playerSelection === "Frog" && computerSelection === "Snake") {
-        let result = "You lose! Paper beats Rock!";
+        gameMessage2.textContent = "You lose!";
         computerScore += 1;
         updateScore();
-        console.log(result, playerScore, computerScore);
         return result;
     } else if (playerSelection === "Frog" && computerSelection === "Frog" || playerSelection === "Snake" && computerSelection === "Snake" || playerSelection === "Slug" && computerSelection === "Slug") {
-        let result = "Draw!";
-        console.log(result, playerScore, computerScore);
+        gameMessage2.textContent = "Draw!";
         return result;
     } else if (playerSelection === "Snake" && computerSelection === "Slug") {
-        let result = "You lose! Scissors beats Paper!";
+        gameMessage2.textContent = "You lose!";
         computerScore += 1;
         updateScore();
-        console.log(result, playerScore, computerScore);
         return result;
     } else if (playerSelection === "Snake" && computerSelection === "Frog") {
-        let result = "You win! Paper beats Rock!";
+        gameMessage2.textContent = "You win!";
         playerScore += 1;
         updateScore();
-        console.log(result, playerScore, computerScore);
         return result;
     } else if (playerSelection === "Slug" && computerSelection === "Snake") {
-        let result = "You win! Scissors beat Paper!";
+        gameMessage2 = "You win!";
         playerScore += 1;
         updateScore();
-        console.log(result, playerScore, computerScore);
         return result;
     } else if (playerSelection === "Slug" && computerSelection === "Frog") {
-        let result = "You lose! Rock beats Scissors!";
+        gameMessage2.textContent = "You lose!";
         computerScore += 1;
         updateScore();
-        console.log(result, playerScore, computerScore);
         return result;
     }
 }
