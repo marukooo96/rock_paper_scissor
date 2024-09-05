@@ -55,7 +55,7 @@ body {
     text-decoration: underline;
     text-align: center;
     padding: 20px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #options {
@@ -81,19 +81,24 @@ body {
 
 #game {
     font-family: 'MS PMincho', serif;  
+    font-size: 13px;
     
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 #scores {
     font-family: 'MS PMincho', 'serif';
+    font-size: 13px;
 
     display: flex;
     justify-content: space-between;
     padding: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 #player {
@@ -106,5 +111,13 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+#winner {
+    font-family:  'MS PMincho', 'serif';
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
