@@ -74,7 +74,7 @@ body {
     font-family: 'MS PMincho', 'serif';
 }
 
-.button :hover{
+.button:hover{
     background-color: #C9A9A6;
     text-decoration: underline;
 }
