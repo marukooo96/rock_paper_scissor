@@ -12,6 +12,11 @@ body {
     /* font-family: 'Akira', serif; */
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 /* .lang-english {
     font-size: 50px;
 } */
@@ -23,15 +28,15 @@ body {
 #header {
     /* text-align: center; */
     font-family: 'Akira', serif;
-    font-size: 30px;
+    font-size: 35px;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     /* flex: 1; */
     align-items: center;
-    gap: 5px;
-    padding: 15px;
-    justify-content: space-around;
+    /* gap: 5px; */
+    /* padding: 15px; */
+    justify-content: space-around; 
 
     background-image: url('img/sakura.png');
 }
