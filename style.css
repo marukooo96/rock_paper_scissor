@@ -63,7 +63,7 @@ img {
     text-decoration: underline;
     text-align: center;
     padding: 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #options {
@@ -75,7 +75,7 @@ img {
 .button {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     
@@ -89,7 +89,8 @@ img {
 
 #game {
     font-family: 'MS PMincho', serif;  
-    font-size: 13px;
+    font-size: 10px;
+    text-align: justify;
     
     display: flex;
     justify-content: space-around;
