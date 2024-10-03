@@ -82,7 +82,7 @@ function updateScore () {
         message.textContent = "Congratulations! You won the game!";
         div.appendChild(message);
 
-        const button = document.createElement('p');
+        const button = document.createElement('button');
         button.textContent = 'Play again';
         button.addEventListener('click', playAgain);
         div.appendChild(button);
@@ -99,8 +99,8 @@ function updateScore () {
         message.textContent = "Oh no! You lost the game!";
         div.appendChild(message);
 
-        const button = document.createElement('p');
-        button.textContent = 'Play again';
+        const button = document.createElement('button');
+        button.textContent = 'Try again';
         button.addEventListener('click', playAgain);
         div.appendChild(button);
 

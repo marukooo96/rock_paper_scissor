@@ -73,7 +73,8 @@ h4 {
 }
 
 p {
-    margin-bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #select {
@@ -81,8 +82,8 @@ p {
     text-decoration: underline;
     text-align: center;
     /* padding: 20px; */
-    font-size: 15px;
-    margin-top: 20px;
+    font-size: 20px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -105,6 +106,10 @@ p {
     font-family: 'MS PMincho', 'serif';
 }
 
+#slug {
+    margin-top: 16px;
+}
+
 .button:hover{
     background-color: #C9A9A6;
     text-decoration: underline;
@@ -112,7 +117,7 @@ p {
 
 #game {
     font-family: 'MS PMincho', serif;  
-    font-size: 10px;
+    font-size: 15px;
     text-align: justify;
     
     display: flex;
@@ -124,14 +129,14 @@ p {
 
 #scores {
     font-family: 'MS PMincho', 'serif';
-    font-size: 13px;
+    font-size: 15px;
 
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 30px;
     margin-top: 0;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
 #player {
