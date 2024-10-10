@@ -77,6 +77,20 @@ p {
     margin-bottom: 5px;
 }
 
+#startGame {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#start {
+    font-size: 25px;
+    background-color: #ffd1df;
+    font-family: 'MS PMincho', 'serif';
+    padding: 15px;
+    cursor: pointer;
+}
+
 #select {
     font-family: 'MS PMincho', 'serif';
     text-decoration: underline;

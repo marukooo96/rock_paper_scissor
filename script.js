@@ -34,6 +34,10 @@ game.appendChild(gameMessage2);
 
 // console.log(playerScore, computerScore);
 
+function redirect() {
+    window.location.href = 'game.html';
+}
+
 
 function selectFrog() {
     playerSelection = 'Frog';

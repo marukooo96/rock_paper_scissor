@@ -16,7 +16,6 @@
     <div class="text">
         <div class="title">
             <h2>What is Mushiken?</h2>
-            <h4>[expand]</h4>
         </div>
         <p>Hello there! I'm pretty sure you are familiar with the game "Rock Paper Scissors", but what does it have to do with Mushiken? Well, Mushiken is actually the ancestor of Rock Paper Scissors, so to speak.</p>
         <p>This type of games played with three hand gestures, called "Sansukumi-ken" 三すくみ拳 in Japanese, originates from China and it's said that the earliest ken games were popularized in Japan by the Chinese community in Nagasaki.</p>
@@ -27,13 +26,16 @@
     <div class="text">
         <div class="title">
             <h2 class="title">Let's play Mushiken!</h2>
-            <h4>[expand]</h4>
         </div>
         <p>Now that you know what Mushiken is, you can try to play it on this web page!</p>
         <p>It's very simple: you can select between frog (rock), snake (paper) and slug (scissor) by clicking on the buttons below and play a set of first to 5 games against the computer. Once you or the computer reaches 5 wins, the game is over. If you want to play again, just click the button below once the game is over. Have fun!</p>
     </div>
 
-    <div id="select">
+    <div id="startGame">
+        <button type="button" id="start" onclick=redirect()>Start Game!</button>
+    </div>
+
+    <!-- <div id="select">
         <h1>Select Your Move</h1>
     </div>
 
@@ -51,13 +53,13 @@
         <div class="button" id="slug">
             <img src="img/slug.png" width="190px">
             <h2>Slug 蛞蝓</h2>
-        </div>
+        </div> -->
         <!-- <button id="frog">Frog</button> -->
         <!-- <button id="snake">Snake</button> -->
         <!-- <button id="slug">Slug</button> -->
     </div>
 
-    <div id="game">
+    <!-- <div id="game">
         
     </div>
 
@@ -74,6 +76,6 @@
 
     <div id="winner">
         
-    </div>
+    </div> -->
 </body>
 </html>
